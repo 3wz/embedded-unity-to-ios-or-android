@@ -1,2 +1,2 @@
-# ios-native-integration-unity
-原生iOS Xcode工程集成Unity Build 的Xcode工程方法
+# embedded-unity-to-ios-or-android
+嵌入Unity3D工程到原生IOS或Android教程
