@@ -4,12 +4,12 @@
 //  Created by Adam Venturella on 10/28/15.
 //  Settings from http://www.the-nerd.be/2015/08/20/a-better-way-to-integrate-unity3d-within-a-native-ios-application/
 
-UNITY_RUNTIME_VERSION = 5.4.5f1;
+UNITY_RUNTIME_VERSION = 5.4.5f1; //对应Unity版本号, 可自行根据匹配修改
 UNITY_SCRIPTING_BACKEND = il2cpp;
-UNITY_IOS_EXPORT_PATH = $(PROJECT_DIR)/IntegrationUnity;
+UNITY_IOS_EXPORT_PATH = $(PROJECT_DIR)/IntegrationUnity; //集成的Unity到处Xcode的工程路径, 我默认到处工程名字为IntegrationUnity, 然后放在原生工程的根目录下了
 GCC_PREFIX_HEADER = $(UNITY_IOS_EXPORT_PATH)/Classes/Prefix.pch;
 
-OTHER_LDFLAGS = -weak-lSystem -weak_framework CoreMotion -weak_framework GameKit -weak_framework iAd -framework CoreGraphics -framework AVFoundation -framework CoreVideo -framework CoreMedia -framework SystemConfiguration -framework CoreLocation -framework CoreText -framework MediaPlayer -framework CFNetwork -framework MediaToolbox -framework AudioToolbox -framework OpenAL -framework QuartzCore -framework OpenGLES -framework UIKit -framework Foundation -liconv.2 -liPhone-lib;
+OTHER_LDFLAGS = -weak-lSystem -weak_framework CoreMotion -weak_framework GameKit -weak_framework iAd -framework CoreGraphics -framework AVFoundation -framework CoreVideo -framework CoreMedia -framework SystemConfiguration -framework CoreLocation -framework CoreText -framework MediaPlayer -framework CFNetwork -framework MediaToolbox -framework AudioToolbox -framework OpenAL -framework QuartzCore -framework OpenGLES -framework UIKit -framework Foundation -liconv.2 -liPhone-lib;//此项为编译所需要的框架名字, 可根据Unity工程需要自行添加删除.
 
 HEADER_SEARCH_PATHS = "$(UNITY_IOS_EXPORT_PATH)/Classes" "$(UNITY_IOS_EXPORT_PATH)/Classes/Native" "$(UNITY_IOS_EXPORT_PATH)/Libraries/libil2cpp/include";
 LIBRARY_SEARCH_PATHS = "$(UNITY_IOS_EXPORT_PATH)/Libraries" "$(UNITY_IOS_EXPORT_PATH)/Libraries/libil2cpp/include";
